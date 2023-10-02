@@ -1,5 +1,4 @@
 import "./App.css";
-import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Alarm from "./comp/Alarm"
 import Stopwatch from "./comp/Stopwatch"

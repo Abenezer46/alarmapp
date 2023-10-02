@@ -16,7 +16,7 @@ function EditOldlAarm() {
   useEffect(() => {
     console.log("hello");
     getAlarm();
-  }, []);
+  });
 
   let getAlarm = async () => {
     let response = await fetch(`http://localhost:8000/alarms/${id}`);

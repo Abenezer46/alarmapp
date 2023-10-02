@@ -61,8 +61,7 @@ const CountDown = () => {
     return () => {
       clearInterval(countdownInterval);
     };
-  }, [isRunning, shouldReset]);
-
+  }, [isRunning, shouldReset, countdownInterval, hour, minute,prevHour,prevMinute, prevSecond, second]);
   useEffect(() => {
     if (countdownFinished) {
       audioRef.current.play();

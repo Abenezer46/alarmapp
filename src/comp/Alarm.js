@@ -33,7 +33,7 @@ const Alarm = () => {
     }, 1000); // Run every second
 
     return () => clearInterval(interval);
-  }, []);
+  },);
 
   let getAlarm = async () => {
     let response = await fetch("http://localhost:8000/alarms/");
@@ -65,7 +65,7 @@ const Alarm = () => {
 
     if (data.length > 0) {
       console.log(alarms);
-      data.map((alarm, index) => {
+      data.map((alarm) => {
         const days = alarm.date;
         console.log("map through alarms");
         const dateMatch = days.filter((day) => day.includes(today));
@@ -79,7 +79,7 @@ const Alarm = () => {
             if (alarm.time === tim) {
               console.log("check if alarm time is equal");
 
-              window.location.href = `/audio/${alarm.id}`;
+              return window.location.href = `/audio/${alarm.id}`;
             }
           }
         }

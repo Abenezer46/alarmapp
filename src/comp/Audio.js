@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import alarmLogo from "../assets/alarm2.gif";
-import stop from "../assets/ Stop.png";
 import bell from "../assets/bellsound.mp3"
 
 function Audio() {
@@ -9,6 +8,7 @@ function Audio() {
   const { id } = useParams();
   const [today, setToday] = useState("");
   const [playSound, setPlaySound] = useState(false)
+
   useEffect(() => {
     getAlarm();
 
@@ -24,7 +24,7 @@ function Audio() {
     setToday(weekdays[new Date().getDay()]);
 
     console.log(today);
-  }, []);
+  }, [getAlarm]);
 
   let getAlarm = async () => {
     let response = await fetch(`http://localhost:8000/alarms/${id}`);
