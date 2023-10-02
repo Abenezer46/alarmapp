@@ -1,0 +1,52 @@
+{
+  "alarms": [
+    {
+      "time": "04:04",
+      "amPm": "PM",
+      "date": [
+        "Mo"
+      ],
+      "active": "active",
+      "sound": "true",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "time": "05:00",
+      "amPm": "Pm",
+      "date": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr"
+      ],
+      "active": "active",
+      "sound": "true"
+    },
+    {
+      "id": 3,
+      "time": "10:00",
+      "amPm": "Am",
+      "date": [
+        "Su",
+        "Sa"
+      ],
+      "active": "notActive",
+      "sound": "false"
+    },
+    {
+      "time": "06:57",
+      "amPm": "PM",
+      "date": [
+        "Mo",
+        "We",
+        "Sa",
+        "Tu"
+      ],
+      "active": "active",
+      "sound": "true",
+      "id": 4
+    }
+  ]
+}

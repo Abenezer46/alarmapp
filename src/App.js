@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Alarm from "./comp/Alarm"
+import Stopwatch from "./comp/Stopwatch"
+import CountDown from "./comp/CountDown"
+import Edit from "./comp/Edit";
+import Audio from "./comp/Audio";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return(
+    <Router>
+    <div className="container">
+      <Routes>
+        <Route path="/" exact Component={Alarm} />
+        <Route path="/stopwatch" exact Component={Stopwatch} />
+        <Route path="/countdown" exact Component={CountDown} />
+        <Route path="/edit/:id" exact Component={Edit} />
+        <Route path="/audio/:id" exact Component={Audio} />
+      </Routes>
     </div>
-  );
+  </Router>
+  )
 }
 
 export default App;
