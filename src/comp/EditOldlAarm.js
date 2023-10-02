@@ -305,23 +305,23 @@ function EditOldlAarm() {
       </div>
 
       <div className="header-edit">
-        <div
+        <button
           className="nav-items delete"
           onClick={() => {
            deleteAlarm(id)
           }}
         >
           Delete
-        </div>
+        </button>
 
-        <div
+        <button
           className="nav-items active"
           onClick={() => {
             addAlarm();
           }}
         >
           Save
-        </div>
+        </button>
       </div>
     </>
   );

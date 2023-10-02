@@ -244,9 +244,9 @@ function New() {
     </div>
 
     <div className="header-edit">
-      <div className="nav-items" onClick={() => { window.location.href = '/'; }}>Cancel</div>
+      <button className="nav-items" onClick={() => { window.location.href = '/'; }}>Cancel</button>
 
-      <div className="nav-items active" onClick={() => { addAlarm() }}>Save</div>
+      <button className="nav-items active" onClick={() => { addAlarm() }}>Save</button>
     </div>
   </div>
   )
