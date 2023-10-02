@@ -9,7 +9,15 @@ function Audio() {
   const [today, setToday] = useState("");
   const [playSound, setPlaySound] = useState(false)
 
+
+
   useEffect(() => {
+    let getAlarm = async () => {
+      let response = await fetch(`http://localhost:8000/alarms/${id}`);
+      let data = await response.json();
+      setAlarm(data);
+    };
+
     getAlarm();
 
     const weekdays = [
@@ -24,13 +32,7 @@ function Audio() {
     setToday(weekdays[new Date().getDay()]);
 
     console.log(today);
-  }, [getAlarm]);
-
-  let getAlarm = async () => {
-    let response = await fetch(`http://localhost:8000/alarms/${id}`);
-    let data = await response.json();
-    setAlarm(data);
-  };
+  },[id,setToday, today]);
 
   const deActive = async (id) => {
     // Perform any logic related to deactivating based on the alarm id
